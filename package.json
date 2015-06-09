@@ -1,0 +1,19 @@
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "private": true,
+  "dependencies": {
+    "javascript-brunch": "~1.7.1",
+    "brunch": "~1.8.3",
+    "bower": "~1.4.1",
+    "babel-brunch": "~5.1.2",
+    "babel": "~5.5.5",
+    "sass-brunch": "~1.8.10"
+  }
+}

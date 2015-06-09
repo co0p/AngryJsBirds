@@ -1,0 +1,12 @@
+{
+  "name": "angryJsBirds",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "box2d": "*"
+  },
+  "overrides": {
+    "box2d": {
+      "main": "build/Box2D_v2.3.1_min.js"
+    }
+  }
+}
