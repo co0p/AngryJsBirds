@@ -1,8 +1,15 @@
 "use strict";
 
+
 var App = {
   init: function init() {
-    console.log('App initialized.');
+    $('.gamelayer').hide();
+    $('#gamestartscreen').show();
+
+    App.canvas = $('#gamecanvas')[0];
+    App.context = App.canvas.getContext('2d');
+
+    console.log('App', App);
   }
 };
 

@@ -6,13 +6,37 @@
   <link rel="stylesheet" href="app.css">
   <script src="vendor.js"></script>
   <script src="app.js"></script>
+
 </head>
 <body>
-  <h1>
-    Brunch
-    <small>A simple demo</small>
-  </h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+  <div id="gamecontainer">
+
+    <canvas id="gamecanvas" width="640" height="480" class="gamelayer"></canvas>
+
+    <div id="scorescreen" class="gamelayer">
+      <span id="score"></span>
+    </div>
+
+    <div class="gamestartscreen">
+      <img src="images/icons/play.png" alt="Play the game"> <br>
+      <img src="images/icons/settings.png" alt="Settings"> <br>
+    </div>
+
+    <div class="loadingscreen" class="gamelayer">
+      <div id="loadingmessage"></div>
+    </div>
+
+    <div id="endingscreen" class="gamelayer" >
+      <p id="endingmessage">
+        The level is over.
+      </p>
+      <p id="playcurrentlevel">
+        Play again!
+      </p>
+    </div>
+
+  </div>
 
   <script>require('application').init();</script>
 </body>
