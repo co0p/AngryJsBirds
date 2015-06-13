@@ -1,5 +1,7 @@
 /**/
 
+var loader = require('loader');
+
 const data = [{
     foreground: 'street-foreground',
     background: 'city-background',
@@ -12,6 +14,7 @@ const data = [{
 
 
 function init() {
+  console.info('init:levels');
   var html = '';
 
   // add input buttons
@@ -27,7 +30,8 @@ function init() {
   });
 }
 
-function load() {
+function load(levelNumber) {
+
 }
 
 module.exports = {
