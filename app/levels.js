@@ -1,14 +1,19 @@
 /**/
 
+var game = require('application');
 var loader = require('loader');
 
 const data = [{
-    foreground: 'street-foreground',
-    background: 'city-background',
+    foreground: 'images/levels/street-foreground.png',
+    background: 'images/levels/city-background.png',
+    slingshot: 'images/slingshot.png',
+    slingshotFront: 'images/slingshotFront.png',
     entities: []
   }, {
-    foreground: 'room-foreground',
-    background: 'room-background',
+    foreground: 'images/levels/room-foreground.png',
+    background: 'images/levels/room-background.png',
+    slingshot: 'images/slingshot.png',
+    slingshotFront: 'images/slingshotFront.png',
     entities: []
   }];
 
@@ -31,7 +36,27 @@ function init() {
 }
 
 function load(levelNumber) {
+  game.currentLevel = {
+    number: levelNumber,
+    hero:[]
+  };
 
+  game.score = 0;
+
+  $('#score').html('Score: ' + game.score);
+  var level = data[levelNumber];
+
+  game.currentLevel.foregroundImage = loader.loadImage(level.foreground);
+  game.currentLevel.backgroundImage = loader.loadImage(level.background);
+
+  game.slingshotImage = loader.loadImage(level.slingshot);
+  game.slingshotFrontImage = loader.loadImage(level.slingshotFront);
+
+  if (loader.loaded) {
+    game.start();
+  } else {
+    loader.onload = game.start;
+  }
 }
 
 module.exports = {

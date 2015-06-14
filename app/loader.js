@@ -1,5 +1,6 @@
 /* loads sound and images */
 
+var gameState = require('gameState');
 
 var loaded = true;
 var loadedCount = 0;
