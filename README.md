@@ -1,5 +1,8 @@
 # angryJsBirds
 
+:rocket: 2015: incomplete project; might be continued; some time in the distance future
+
+
 This is an AngryBrids clone written in JavaScript. It is losely an adaptation
 of the AngryFruits implementation by Aditya Ravi Shankar in his book 'Pro Html5 Games'.
 It is a playground to get to know new es6 features as well.
